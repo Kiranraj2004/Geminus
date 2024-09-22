@@ -1,0 +1,150 @@
+/* Sidebar container */
+.sidebar {
+    width: 250px; /* Default width */
+    height: 100vh;
+    background-color: #f0f4f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    /* position: fixed; */
+    left: 0;
+    top: 0;
+    transition: width 0.3s ease;
+
+}
+
+/* Collapsed sidebar */
+.sidebar.collapsed {
+    width: 80px; /* Width when collapsed */
+}
+
+/* Extended sidebar */
+.sidebar.extended {
+    width: 250px; /* Width when extended */
+}
+
+/* Top section of the sidebar */
+.sidebar .top {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Menu icon */
+.menus {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/* New chat button */
+.new_chat {
+    display: inline-flex;
+    align-items: center;
+    background-color: #e6eaf1;
+    color: grey;
+    padding: 8px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    font-size: 18px;
+}
+
+.new_chat img {
+    width: 24px;
+    height: 30px;
+    margin-right: 15px;
+    
+}
+
+.new_chat:hover {
+    background-color: #cbcfd6;
+}
+
+/* Recent chats section */
+.recent {
+    margin-top: 10px;
+}
+
+.recenttitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.recent_entry {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #e6eaf1;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.recent_entry img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.recent_entry p {
+    font-size: 15px;
+    color: grey;
+}
+
+.recent_entry:hover {
+    background-color: #cbcfd6;
+}
+
+/* Bottom section */
+.bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom_item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #e6eaf1;
+    margin-top: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bottom_item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.bottom_item p {
+    font-size: 14px;
+    color: grey;
+}
+
+.bottom_item:hover {
+    background-color: #cbcfd6;
+}
+
+/* Handling collapsed state */
+.sidebar.collapsed .new_chat p,
+.sidebar.collapsed .recenttitle,
+.sidebar.collapsed .recent_entry p,
+.sidebar.collapsed .bottom_item p {
+    display: none;
+}
+
+/* Handling collapsed icons */
+.sidebar.collapsed .new_chat img,
+.sidebar.collapsed .recent_entry img,
+.sidebar.collapsed .bottom_item img {
+    margin-right: 0;
+}
